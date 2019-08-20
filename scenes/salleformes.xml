@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<raytracer>
+	<camera>
+		<eye>0, 3, 200</eye>
+		<look_at>0.0 0.0 0.0</look_at>
+		<distance>15000</distance>
+		<zoom>1</zoom>
+		<direction>0 1 0</direction>
+	</camera>
+	<viewplane>
+		<hres>800</hres>
+		<vres>800</vres>
+		<win_width>800</win_width>
+		<win_height>800</win_height>
+		<antialiasing>1</antialiasing>
+		<backgroundcolor>1 1 1</backgroundcolor>
+		<show_out_of_gamut>0</show_out_of_gamut>
+		<max_depth>3</max_depth>
+	</viewplane>
+	<lights>
+		<basic_ambient>
+			<intensity>1.5</intensity>
+			<color>1 1 1</color>
+		</basic_ambient>
+		<spot>
+			<location>0 3 50</location>
+            <color>1 1 1</color>
+            <intensity>3</intensity>
+            <shadow>1</shadow>
+            <direction>0 0 0</direction>
+            <numsamples>100</numsamples>
+        </spot>
+	</lights>
+	<objects>
+		<plane>
+		   <point>0, -3, 0</point>
+		   <normal>0 1 0</normal>
+		   <material>
+			   <phong>
+				   <diffuse_coef>0.8</diffuse_coef>
+				   <ambient_coef>0.2</ambient_coef>
+				   <glossy_coef>0.46</glossy_coef>
+				   <color>0.7 0.8 0.1</color>
+				   <glossy_color>1 1 1</glossy_color>
+				   <reflective_coef>1</reflective_coef>
+				   <reflective_color>1 1 1</reflective_color>
+				   <ior>1.0</ior>
+				   <transparence_coef>0.9</transparence_coef>
+				   <exp>1000</exp>
+				   <numsamples>9</numsamples>
+			   </phong>
+		</material>
+		</plane>
+		<plane>
+		   <point>0, 3, 0</point>
+		   <normal>0 -1 0</normal>
+		   <material>
+			   <phong>
+				   <diffuse_coef>0.8</diffuse_coef>
+				   <ambient_coef>0.2</ambient_coef>
+				   <glossy_coef>0.46</glossy_coef>
+				   <color>0.8 0.7 0.9</color>
+				   <glossy_color>1 1 1</glossy_color>
+				   <reflective_coef>1</reflective_coef>
+				   <reflective_color>1 1 1</reflective_color>
+				   <ior>1.0</ior>
+				   <transparence_coef>0.9</transparence_coef>
+				   <exp>1000</exp>
+				   <numsamples>9</numsamples>
+			   </phong>
+		</material>
+		</plane>
+		<plane>
+		   <point>-4, 10, 0</point>
+		   <normal>1 0 0</normal>
+		   <material>
+			   <phong>
+				   <diffuse_coef>0.8</diffuse_coef>
+				   <ambient_coef>0.2</ambient_coef>
+				   <glossy_coef>0.46</glossy_coef>
+				   <color>0 0.7 0.9</color>
+				   <glossy_color>1 1 1</glossy_color>
+				   <reflective_coef>1</reflective_coef>
+				   <reflective_color>1 1 1</reflective_color>
+				   <ior>1.0</ior>
+				   <transparence_coef>0.9</transparence_coef>
+				   <exp>1000</exp>
+				   <numsamples>9</numsamples>
+			   </phong>
+		</material>
+		</plane>
+		<plane>
+		   <point>4, 10, 0</point>
+		   <normal>-1 0 0</normal>
+		   <material>
+			   <phong>
+				   <diffuse_coef>0.8</diffuse_coef>
+				   <ambient_coef>0.2</ambient_coef>
+				   <glossy_coef>0.46</glossy_coef>
+				   <color>0 0.8 0.5</color>
+				   <glossy_color>1 1 1</glossy_color>
+				   <reflective_coef>1</reflective_coef>
+				   <reflective_color>1 1 1</reflective_color>
+				   <ior>1.0</ior>
+				   <transparence_coef>0.9</transparence_coef>
+				   <exp>1000</exp>
+				   <numsamples>9</numsamples>
+			   </phong>
+		</material>
+		</plane>
+		<plane>
+		   <point>0, 10, -4</point>
+		   <normal>0 0 1</normal>
+		   <material>
+			   <phong>
+				   <diffuse_coef>0.8</diffuse_coef>
+				   <ambient_coef>0.2</ambient_coef>
+				   <glossy_coef>0.46</glossy_coef>
+				   <color>0.8 0.7 0.7</color>
+				   <glossy_color>1 1 1</glossy_color>
+				   <reflective_coef>1</reflective_coef>
+				   <reflective_color>1 1 1</reflective_color>
+				   <ior>1.0</ior>
+				   <transparence_coef>0.9</transparence_coef>
+				   <exp>1000</exp>
+				   <numsamples>9</numsamples>
+			   </phong>
+		</material>
+		</plane>
+		<paraboloid>
+			<position>3 1 8</position>
+			<scale>0.5</scale>
+			<direction>0 1 0</direction>
+			<material>
+				<phong>
+					<diffuse_coef>0.7</diffuse_coef>
+					<ambient_coef>0.3</ambient_coef>
+					<glossy_coef>0.46</glossy_coef>
+					<color>0.7 0.2 0.9</color>
+					<glossy_color>1 1 1</glossy_color>
+					<reflective_coef>0.8</reflective_coef>
+					<reflective_color>1 1 1</reflective_color>
+					<ior>1.4</ior>
+					<transparence_coef>0.2</transparence_coef>
+					<exp>2</exp>
+					<numsamples>1</numsamples>
+				</phong>
+			</material>
+		</paraboloid>
+		<partsphere>
+			<rotation>-10 0 0</rotation>
+			<center>-3 -2 0</center>
+			<radius>2.5</radius>
+			<phimin>0</phimin>
+			<phimax>360</phimax>
+			<thetamin>0</thetamin>
+			<thetamax>45</thetamax>
+			<material>
+				<phong>
+					<diffuse_coef>0.7</diffuse_coef>
+					<ambient_coef>0.3</ambient_coef>
+					<glossy_coef>0.46</glossy_coef>
+					<color>0.2 0.2 0.6</color>
+					<glossy_color>1 1 1</glossy_color>
+					<reflective_coef>0.8</reflective_coef>
+					<reflective_color>1 1 1</reflective_color>
+					<ior>1.4</ior>
+					<transparence_coef>0.2</transparence_coef>
+					<exp>2</exp>
+					<numsamples>1</numsamples>
+				</phong>
+			</material>
+		</partsphere>
+		<partopencylinder>
+			<bottom>-3</bottom>
+			<top>-2</top>
+			<radius>1</radius>
+			<phimin>180</phimin>
+			<phimax>0</phimax>
+			<material>
+				<phong>
+					<diffuse_coef>0.7</diffuse_coef>
+					<ambient_coef>0.3</ambient_coef>
+					<glossy_coef>0.46</glossy_coef>
+					<color>0.2 0.2 0.8</color>
+					<glossy_color>1 1 1</glossy_color>
+					<reflective_coef>0.8</reflective_coef>
+					<reflective_color>1 1 1</reflective_color>
+					<ior>1.4</ior>
+					<transparence_coef>0.2</transparence_coef>
+					<exp>2</exp>
+					<numsamples>1</numsamples>
+				</phong>
+			</material>
+		</partopencylinder>
+		<limcone>
+			<translation>3 -1.5 20</translation>
+			<height>1</height>
+			<radius>2</radius>
+			<top>1</top>
+			<bottom>-1</bottom>
+			<material>
+				<phong>
+					<diffuse_coef>0.7</diffuse_coef>
+					<ambient_coef>0.3</ambient_coef>
+					<glossy_coef>0.46</glossy_coef>
+					<color>0 0.2 0.9</color>
+					<glossy_color>1 1 1</glossy_color>
+					<reflective_coef>0.8</reflective_coef>
+					<reflective_color>1 1 1</reflective_color>
+					<ior>1.4</ior>
+					<transparence_coef>0.2</transparence_coef>
+					<exp>2</exp>
+					<numsamples>1</numsamples>
+				</phong>
+			</material>
+ 		</limcone>
+		<triangle>
+			<vertice_1>-3 1 0</vertice_1>
+			<vertice_2>-2.5 1.4 1</vertice_2>
+			<vertice_3>-2 -1.5 0</vertice_3>
+			<material>
+				<phong>
+					<diffuse_coef>0.7</diffuse_coef>
+					<ambient_coef>0.3</ambient_coef>
+					<glossy_coef>0.46</glossy_coef>
+					<color>1 0.8 0.7</color>
+					<glossy_color>1 1 1</glossy_color>
+					<reflective_coef>0.8</reflective_coef>
+					<reflective_color>1 1 1</reflective_color>
+					<ior>1.4</ior>
+					<transparence_coef>0.2</transparence_coef>
+					<exp>2</exp>
+					<numsamples>1</numsamples>
+				</phong>
+			</material>
+		</triangle>
+		<disk>
+			<rotation>25 0 0</rotation>
+			<center>1 5 7</center>
+			<radius>2</radius>
+			<normal>0 1 0</normal>
+			<material>
+				<phong>
+					<diffuse_coef>0.7</diffuse_coef>
+					<ambient_coef>0.3</ambient_coef>
+					<glossy_coef>0.46</glossy_coef>
+					<color>1 0.6 0.6</color>
+					<glossy_color>1 1 1</glossy_color>
+					<reflective_coef>0.8</reflective_coef>
+					<reflective_color>1 1 1</reflective_color>
+					<ior>1.4</ior>
+					<transparence_coef>0.2</transparence_coef>
+					<exp>2</exp>
+					<numsamples>1</numsamples>
+				</phong>
+			</material>
+		</disk>
+		<torus>
+			<rotation>-60 0 0</rotation>
+			<translation>0 2 42</translation>
+			<diameter>1</diameter>
+			<density>0.1</density>
+			<material>
+				<transparence>
+					<diffuse_coef>0.5</diffuse_coef>
+					<ambient_coef>0.5</ambient_coef>
+					<glossy_coef>0.2</glossy_coef>
+					<color>1 1 1</color>
+					<glossy_color>1 1 1</glossy_color>
+					<reflective_coef>0.1</reflective_coef>
+					<reflective_color>1 1 1</reflective_color>
+					<ior>1</ior>
+					<transparence_coef>0.9</transparence_coef>
+					<exp>2</exp>
+					<numsamples>1</numsamples>
+				</transparence>
+			</material>
+		</torus>
+	</objects>
+</raytracer>
