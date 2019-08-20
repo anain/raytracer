@@ -1,5 +1,1 @@
-Projet réalisé dans le cadre de 42.
-
-Ce programme génére des images de synthèse selon la méthode du Ray-Tracing. Ces images de synthèse représentent une
-scène, vue d’une position et d’un angle spécifiques, définie par des objets géométriques
-simples, entiers ou partiels, et disposant d’un système d’éclairage.
+This program generates synthetic images by ray tracing. Those images represent a scene, viewed from a specific position and angle, defined by geometric objects and lights.
